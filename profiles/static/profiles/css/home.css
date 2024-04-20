@@ -1,0 +1,330 @@
+@import url("global.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    box-shadow: inset 0 40px 25px 4px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background);
+    display: grid;
+    place-items: center;
+
+}
+.wrapper{
+    
+    height: 70vh;
+    width: 75%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--background);
+}
+
+.wrapper h1{
+    font-size: 3.5vw;
+    font-weight: 400;
+    color: var(--primary-text);
+    margin-bottom: 1rem;
+    filter: drop-shadow(3px 4px 5px hsla(0, 0%, 0%, 0.552));
+}
+
+.cards{
+    background-color: #333;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    border-radius: 4px;
+    height: clamp(84px, 10vw, 200px);
+    width: clamp(84px, 10vw, 200px);
+    
+    box-shadow: 0 .5px 1px rgba(0, 0, 0, 0.5)
+
+
+}
+.cards img{
+    border-radius: 4px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+}
+
+.name{
+    filter: drop-shadow(3px 4px 5px hsla(0, 0%, 0%, 0.552));
+    margin-top: -11px;
+    text-align: center;
+    color: rgb(117, 117, 117);
+    font-size: clamp(15px, 1.2vw, 50px);
+}
+
+.lock{
+    height: 20px;
+    width: 20px;
+    color: rgb(117, 117, 117);
+    position: absolute;
+    bottom: -2.5rem;
+    pointer-events: none;
+}
+
+.card-holder{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+
+    
+    position: relative;
+
+    cursor: pointer;
+}
+
+.card-holder:hover .cards{
+    outline: 4px solid white;
+}
+
+.card-holder:hover .name{
+    color: white;
+}
+
+.manage{
+    padding: .5em 0;
+    font-size: clamp(15px, 1.2vw, 50px);
+    border: 1px solid rgb(119, 119, 119);
+    background-color: transparent;
+    color: rgb(116, 116, 116);
+    cursor: pointer;
+    margin-top: 100px;
+    filter: drop-shadow(3px 4px 5px hsla(0, 0%, 0%, 0.552));
+    font-weight: 400;
+}
+.manage a{
+    padding: .5em 1.5em;
+    text-decoration: none;
+    background-color: transparent;
+    color: rgb(116, 116, 116);
+}
+
+.manage:hover{
+
+    color: white;
+    border: 1px solid white;
+
+}
+
+.manage:hover a{
+    color: white;
+}
+
+/* MODAL CSS*/
+
+.ClosedModal{
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: -100vh;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(7, 7, 7);
+    transition: top .5s ease-in-out, opacity .5s ease-in-out;
+}
+
+
+.pin-container{
+
+    height: 80vh;
+    width: 75%;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(7, 7, 7);
+    margin-top: 7.5rem;
+}
+
+.lock-text{
+    font-size: 1.3vw;
+    color: grey;
+
+}
+
+.pin-container h1{
+    font-size: 2.5vw;
+    color: var(--primary-text);
+}
+
+.warning{
+    font-size: 1.3vw;
+    color: rgb(255, 54, 54);
+}
+
+.forgot-btn{
+
+    background-color: transparent;
+    border: none;
+    color: var(--primary-text);
+    font-size: 1.3vw;
+    padding: .8em 1.8em;
+    margin-top: 8rem;
+    cursor: pointer;
+
+}
+
+.forgot-btn:hover{
+    background-color: rgb(22, 22, 22);
+}
+
+.pin-frm{
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1rem;
+    height: 20%;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+.pins{
+    color: var(--primary-text);
+    text-align: center;
+    height: clamp(10px,4.8vw,500px);
+    width: clamp(10px,4.8vw,500px);
+    font-size: 2.5em;
+
+    background-color: rgb(7, 7, 7);
+    border: 1px solid rgb(189, 189, 189);
+
+    transition: height .1s ease-in-out, width .1s ease-in-out;
+
+    
+}
+
+.focus{
+    height: clamp(55px,5.4vw,500px);
+    width: clamp(55px,5.4vw,500px);
+}
+
+.close{
+    font-weight: normal;
+    height: 2vw;
+    width: 2vw;
+    color: white;
+    position: absolute;
+    top: 5rem;
+    right: 2.5rem;
+    cursor: pointer;
+}
+
+.OpenModal{
+    left: 0;
+    position: absolute;
+    top:0;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(7, 7, 7);
+    opacity: 1;
+    transition: top .5s ease-in-out, opacity .5s ease-in-out;
+}
+
+/* For manage profle*/
+
+.done{
+    font-size: clamp(15px, 1.2vw, 50px);
+    filter: drop-shadow(3px 4px 5px hsla(0, 0%, 0%, 0.552));
+    border: none;
+    cursor: pointer;
+    margin-top: 100px;
+    color: black;
+    background-color: white;
+    font-weight: 500;
+
+}
+.done a{
+    text-decoration: none;
+    color: black;
+    padding: .5em 1.5em;
+    background-color: white;
+}
+.done:hover{
+
+    
+    background-color: red;
+    color: white;
+
+}
+.done:Hover a{
+    background-color: red;
+    color: white;
+}
+
+.cards-manage{
+    background-color: #333;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    border-radius: 4px;
+    height: clamp(84px, 10vw, 200px);
+    width: clamp(84px, 10vw, 200px);
+
+    box-shadow: 0 .5px 1px rgba(0, 0, 0, 0.5)
+}
+.cards-manage::after{
+    content: "";
+    border-radius: 4px;
+    height: clamp(84px, 10vw, 200px);
+    width: clamp(84px, 10vw, 200px);
+    background-color: hsla(0, 0%, 20%, 0.454);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    box-shadow: inset 0 -10px 10px hsla(0, 0%, 15%, 0.575);;
+}
+.cards-manage img{
+    border-radius: 4px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-holder:hover .cards-manage{
+    outline: 4px solid rgb(145, 145, 145);
+}
+
+.card-holder:hover .name{
+    color: rgb(224, 224, 224);
+}
+
+.edit{
+    z-index: 10;
+    top: 30%;
+    left: 40%;
+    position: absolute;
+    color: white;
+    height: clamp(20px, 2.4vw, 250px);
+    width: clamp(20px, 2.4vw, 250px);
+}

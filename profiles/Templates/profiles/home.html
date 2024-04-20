@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metflix</title>
+    <link rel="stylesheet" href="{% static 'profiles/css/home.css' %}" />
+    <link rel="icon" type="image/png" href="{% static 'profiles/images/icon.png' %}" >
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Who's watching?</h1>
+
+      <div class="card-container">
+        <div class="card-holder">
+          <div class="cards"><img src= "{% static 'profiles/images/penguin.jpg' %}" alt="" /></div>
+          <p class="name">Ianne</p>
+          <svg class="lock" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon-profile-lock ltr-4z3qvp e1svuwfo1" data-name="Lock" aria-labelledby=":R5b9km:" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 6C7 3.23858 9.23858 1 12 1C14.7614 1 17 3.23858 17 6V7H19C20.1046 7 21 7.89543 21 9V18.6529C21 19.6274 20.2885 20.4855 19.2814 20.6076C18.0287 20.7593 15.492 21 12 21C8.50801 21 5.97128 20.7593 4.71855 20.6076C3.71153 20.4855 3 19.6274 3 18.6529V9C3 7.89543 3.89543 7 5 7H7V6ZM15 6V7H9V6C9 4.34315 10.3431 3 12 3C13.6569 3 15 4.34315 15 6ZM5 9V18.627C6.19927 18.7708 8.63769 19 12 19C15.3623 19 17.8007 18.7708 19 18.627V9H5ZM11 12V16H13V12H11Z" fill="currentColor"></path></svg>
+        </div>
+        <div class="card-holder">
+          <div class="cards"><img src= "{% static 'profiles/images/bee.jpg' %}" alt="" /></div>
+          <p class="name">Nikka</p>
+        </div>
+        <div class="card-holder">
+          <div class="cards"><img src="{% static 'profiles/images/polar.jpg' %}" alt="" /></div>
+          <p class="name">Angel</p>
+          <svg  class="lock" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon-profile-lock ltr-4z3qvp e1svuwfo1" data-name="Lock" aria-labelledby=":R5b9km:" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 6C7 3.23858 9.23858 1 12 1C14.7614 1 17 3.23858 17 6V7H19C20.1046 7 21 7.89543 21 9V18.6529C21 19.6274 20.2885 20.4855 19.2814 20.6076C18.0287 20.7593 15.492 21 12 21C8.50801 21 5.97128 20.7593 4.71855 20.6076C3.71153 20.4855 3 19.6274 3 18.6529V9C3 7.89543 3.89543 7 5 7H7V6ZM15 6V7H9V6C9 4.34315 10.3431 3 12 3C13.6569 3 15 4.34315 15 6ZM5 9V18.627C6.19927 18.7708 8.63769 19 12 19C15.3623 19 17.8007 18.7708 19 18.627V9H5ZM11 12V16H13V12H11Z" fill="currentColor"></path></svg>
+        </div>
+        <div class="card-holder">
+          <div class="cards"><img src="{% static 'profiles/images/eagle.jpg' %}" alt="" /></div>
+          <p class="name">Jenny Kim</p>
+          <svg  class="lock" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon-profile-lock ltr-4z3qvp e1svuwfo1" data-name="Lock" aria-labelledby=":R5b9km:" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 6C7 3.23858 9.23858 1 12 1C14.7614 1 17 3.23858 17 6V7H19C20.1046 7 21 7.89543 21 9V18.6529C21 19.6274 20.2885 20.4855 19.2814 20.6076C18.0287 20.7593 15.492 21 12 21C8.50801 21 5.97128 20.7593 4.71855 20.6076C3.71153 20.4855 3 19.6274 3 18.6529V9C3 7.89543 3.89543 7 5 7H7V6ZM15 6V7H9V6C9 4.34315 10.3431 3 12 3C13.6569 3 15 4.34315 15 6ZM5 9V18.627C6.19927 18.7708 8.63769 19 12 19C15.3623 19 17.8007 18.7708 19 18.627V9H5ZM11 12V16H13V12H11Z" fill="currentColor"></path></svg>
+        </div>
+        <div class="card-holder">
+          <div class="cards"><img src="{% static 'profiles/images/fish.jpg' %}" alt="" /></div>
+          <p class="name">Cardo</p>
+          <svg  class="lock" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon-profile-lock ltr-4z3qvp e1svuwfo1" data-name="Lock" aria-labelledby=":R5b9km:" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 6C7 3.23858 9.23858 1 12 1C14.7614 1 17 3.23858 17 6V7H19C20.1046 7 21 7.89543 21 9V18.6529C21 19.6274 20.2885 20.4855 19.2814 20.6076C18.0287 20.7593 15.492 21 12 21C8.50801 21 5.97128 20.7593 4.71855 20.6076C3.71153 20.4855 3 19.6274 3 18.6529V9C3 7.89543 3.89543 7 5 7H7V6ZM15 6V7H9V6C9 4.34315 10.3431 3 12 3C13.6569 3 15 4.34315 15 6ZM5 9V18.627C6.19927 18.7708 8.63769 19 12 19C15.3623 19 17.8007 18.7708 19 18.627V9H5ZM11 12V16H13V12H11Z" fill="currentColor"></path></svg>
+        </div>
+        
+      </div>
+
+      <button class="manage"><a href="/manage">Manage Profiles</a></button>
+    </div>
+
+
+
+
+    <div class="ClosedModal" id="modal">
+
+      <div class="pin-container">
+        <svg class="close" id="close" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon-close ltr-4z3qvp e1svuwfo1" data-name="X" aria-labelledby=":r0:" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.5858 12L2.29291 3.70706L3.70712 2.29285L12 10.5857L20.2929 2.29285L21.7071 3.70706L13.4142 12L21.7071 20.2928L20.2929 21.7071L12 13.4142L3.70712 21.7071L2.29291 20.2928L10.5858 12Z" fill="currentColor"></path></svg>
+        <p class="lock-text">Profile Lock is currently on.</p>
+        <h1>Enter your PIN to access this profile.</h1>
+        
+        <form id="pinForm" class="pin-frm" action="{% url 'check_pin' %}" method="POST">
+          {% csrf_token %}
+          <input class="pins" type="password" inputmode="numeric" maxlength="1" size="1" min="0" max="9" pattern="[0-9]{1}" id="pin1" name="pin1" required>
+          <input class="pins" type="password" inputmode="numeric" maxlength="1" size="1" min="0" max="9" pattern="[0-9]{1}" id="pin2" name="pin2" required>
+          <input class="pins" type="password" inputmode="numeric" maxlength="1" size="1" min="0" max="9" pattern="[0-9]{1}" id="pin3" name="pin3" required>
+          <input class="pins" type="password" inputmode="numeric" maxlength="1" size="1" min="0" max="9" pattern="[0-9]{1}" id="pin4" name="pin4" required>
+      </form>
+      
+        <p class="warning" visibility="false">Your PIN must be 4 numbers.</p>
+        <button class="forgot-btn">Forgot PIN?</button>
+      </div>
+
+
+
+
+    </div>
+
+    <script src="{% static 'profiles/Scripts/script.js' %}"></script>
+  </body>
+</html>

@@ -1,0 +1,739 @@
+@import url("global.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+::-webkit-scrollbar {
+    width: 12px;  /* for vertical scrollbars */
+    height: 12px; /* for horizontal scrollbars */
+    background-color: #181818;;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(102, 0, 0);
+    border-radius: 4px;
+    border: 2px solid #181818;;
+}
+
+::-webkit-scrollbar-track {
+    background: #181818;;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+::-webkit-scrollbar-corner {
+    background: #181818;;
+}
+
+
+
+
+
+
+
+
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container{
+    position: relative;
+    height: 125vh;
+    width: 100%;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.profile-wrapper{
+     height: 100%;
+     width: 100%;
+     padding: 4vw;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+    width: 100%;
+
+    padding: .8vw 4vw;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.nav-first{
+    display: flex;
+
+}
+
+.lists{
+    font-size: clamp(10px,.8vw, 20px);
+    display: flex;
+    list-style: none;
+    color: #e2e2e2;
+    gap: 1.2vw;
+    margin-left: 2rem;
+    align-items: center;
+    filter: drop-shadow(3px 4px 5px hsla(0, 0%, 0%, 0.552));
+    white-space: nowrap;
+
+}
+
+.lists li{
+    cursor: pointer;
+}
+
+.lists li:hover{
+    color: rgb(175, 175, 175);
+}
+
+.logo{
+    height: clamp(22px, 5vw, 32px);
+    width: clamp(100px, 5vw, 200px);
+    filter: drop-shadow(3px 4px 5px hsla(0, 0%, 0%, 0.552));
+
+    cursor: pointer;
+}
+
+.nav-second{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    color: #e5e5e5;
+    font-size: clamp(10px,.8vw, 20px);
+}
+
+.picture{
+    height: 35px;
+    width: 35px;
+    border-radius: 5.5px;
+    filter: drop-shadow(3px 4px 5px hsla(0, 0%, 0%, 0.3 52));
+}
+
+.picture img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 5.5px;
+}
+.arrowdown{
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+    transform: rotate(0deg);
+    transition: transform .15s ease-in;
+}
+.arrowup{
+    height: 15px;
+    width: 15px;
+    transform: rotate(180deg);
+    transition: transform .15s ease-in;
+    cursor: pointer;
+}
+
+.nav-icons{
+    cursor: pointer;
+}
+
+.jenny-name::After{
+    content: "Jenny";
+    cursor: pointer;
+}
+.angel-name::After{
+    content: "Angel";
+    cursor: pointer;
+}
+.ianne-name::after{
+
+    content: "Ianne";
+    cursor: pointer;
+
+}
+.gado-name::after{
+    content: "Gado";
+    cursor: pointer;
+}
+
+.picture-holder{
+
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+
+    cursor: pointer;
+}
+
+.background{
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+
+
+}
+
+.background-container{
+    box-shadow: inset 0 30px 25px 4px rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    background: linear-gradient(0deg, #181818, transparent 35%);
+
+}
+
+
+
+
+.profile-ui{
+
+    height: 20vw;
+    margin-top: clamp(200px,12vw,500px);
+}
+
+.title{
+    height: clamp(100px, 9vw,300px);
+    filter: drop-shadow(3px 4px 5px hsla(0, 0%, 0%, 0.552));
+}
+
+.redline{
+    background-color: red;
+    border: 2px solid rgb(211, 8, 8);
+    height: 2px;
+
+    width: clamp(150px, 9vw, 400px);
+
+}
+
+.greyline{
+    border: 1px solid rgb(109, 109, 109);
+    background-color: grey;
+    height: 2px;
+
+    width: clamp(100px, 5vw, 400px);
+}
+
+.lines{
+    width: clamp(310px, 8vw, 1000px);
+    display: flex;
+    filter: drop-shadow(3px 4px 5px hsla(0, 0%, 0%, 0.352));
+}
+
+.time{
+    font-size:clamp(10px,.85vw,50px) ;
+    white-space: nowrap;
+    color: #b4b4b4;
+    filter: drop-shadow(3px 4px 5px hsla(0, 0%, 0%, 0.552));
+}
+
+.watchtime{
+    margin-top: 3vw;
+    display: flex;
+    align-items: center;
+
+    margin-left: 1.2vw;
+    
+}
+
+.buttons{
+    margin-top: .8vw;
+    display: flex;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+    justify-content: space-between;
+}
+
+.first-btns, .second-btns{
+    display: flex;
+    align-items: center;
+    gap: .5vw;
+}
+
+
+.add, .like, .mute{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2.5px solid hsla(0, 0%, 100%, .5);
+
+    background-color: rgba(42, 42, 42, .6);
+    color: white;
+    border-radius: 50%;
+    padding: .7rem;
+    filter: drop-shadow(3px 4px 5px hsla(0, 0%, 0%, 0.596));
+    opacity: .8;
+    cursor: pointer;
+}
+
+.add:Hover, .like:Hover, .mute:Hover{
+
+    border: 2.5px solid hsl(0, 0%, 100%);
+
+}
+
+.btn-icon{
+    height: 20px;
+    width: 20px;
+}
+
+.resume:Hover{
+    background-color: #cfcfcf;
+}
+
+.resume{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .8rem;
+    border-radius: 5px;
+    font-weight: 500;
+    padding: .6em 1.5em;
+    font-size: clamp(15px, 1vw, 50px);
+    cursor: pointer;
+    filter: drop-shadow(3px 4px 5px hsla(0, 0%, 0%, 0.352));
+    border: none;
+}
+
+
+
+
+
+
+
+.footer-intro{
+    display: flex;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 -10px 10px #181818;
+    background-color: #181818;
+    min-height: 27vh;
+    width: 100%;
+
+    padding: .3vw 5vw;
+
+    
+}
+
+.date-container{
+    display: flex;
+    font-size:clamp(10px,.9vw,50px) ;
+    white-space: nowrap;
+    color: #b4b4b4;
+    gap: .5vw;
+    
+    align-items: center;
+}
+
+.hd{
+    border: 1px solid rgb(170, 170, 170);
+    display: flex;
+    height: 15px;
+    color: white;
+    padding: .2em .4em;
+    align-items: center;
+    font-size: 11px;
+}
+
+.footer-icon{
+    color: white ;
+}
+
+.age{
+    border: 2px solid rgb(170, 170, 170);
+    font-size: clamp(15px,1.3vw,20px);
+    background-color: var(--background);
+    color: white;
+    
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: .3em .9em;
+    height: 50px;
+    width: 95px;
+}
+
+.age-container{
+    margin-top: .5rem;
+    display: flex;
+    align-items: center;
+    
+    gap: .7rem;
+}
+
+.age-genre{
+    display: flex;
+    justify-content: space-between;
+
+    color: grey;
+    font-weight: 600;
+}
+
+.jenny-genre::After{
+    content: "Documentary, Comedy, Crime";
+    color: white ;
+    font-weight: 500;
+}
+
+.angel-genre::after{
+    content: "Suspense, Sci-Fi, Fantasy";
+    color: white ;
+    font-weight: 500;
+}
+
+.ianne-genre::After{
+    content: "Adventure, Comedy, Horror";
+    color: white ;
+    font-weight: 500;
+}
+
+.gado-genre::after{
+    content: "Drama, Horror, Comedy";
+    color: white ;
+    font-weight: 500;
+}
+
+.thisshowis{
+    color: white ;
+    font-weight: 500;
+}
+
+.jenny-personality::After{
+    content: "Language";
+
+    color: #e0e0e0;
+}
+
+.angel-personality::after{
+    content: "Violent, Romantic";
+
+    color: #e0e0e0;
+
+}
+
+.ianne-personality::after{
+    content: "Cute, Handsome";
+
+    color: #e0e0e0;
+
+}
+.gado-personality::after{
+    content: "Mischievious";
+
+    color: #e0e0e0;
+
+}
+
+.introduction-container{
+    margin-top: 1.5rem;
+    max-width: 60vw;
+}
+
+.jenny-introduction::After{
+    content: "Born on a warm summer day on August 7, 1996, in the vibrant city of Tacloban, Jenny Ripalda emerged into the world with a fighter’s spirit. From her early years, the determination to excel and achieve her dreams was evident in every step she took. As she grew, so did her aspirations, drawing strength from the unwavering support of her father, who stood as her pillar during the toughest times.";
+    color: #e0e0e0;
+}
+
+.ianne-introduction::After{
+    content: "A boy who desires nothing more than to lie down and do nothing finds that life has other plans for him. Witness his journey as he navigates through a series of relentless challenges, despite his initial hopelessness. See how each obstacle tests his resilience and pushes him to grow in ways he never expected.";
+    color: #e0e0e0;
+}
+
+.gado-introduction::after{
+    content: "In the humble barangay of San Vicente, AlangAlang, Leyte, Angel Kaye Gado, a spirited and tenacious 22-year-old, embarks on a transformative journey that defies the constraints of her reality. As the third daughter in a family of all girls, Angel carries not just her dreams, but the aspirations of those who came before her.";
+    color: #e0e0e0;
+}   
+
+.angel-introduction::After{
+
+    content: "In Iayanna's Journey, we delve into the life of Iayanna Angel, a 19-year-old who finds solace and joy in the world of Korean dramas and movies of all kinds, preferring the comfort of her home. Even though Iayanna loves watching Korean dramas and movies at home, she struggles with not wanting to be remembered as the girl who fell; she wants them to see her as the girl who got back up. Her story teaches us about never giving up, finding ourselves, and how powerful it is to embrace our own path.";
+    color: #e0e0e0;
+}
+
+
+
+
+
+
+.cast{
+    color: grey;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.jenny::After{
+    content: "Jenny Repalda";
+    color: white ;
+    font-weight: 500;
+}
+
+.angel::after{
+    content: "Iayanna Angel Z. Bulilan";
+    color: white ;
+    font-weight: 500;
+}
+.ianne::After{
+    content: "Ianne Carl Z. Bulilan";
+    color: white ;
+    font-weight: 500;
+}
+
+.gado::After{
+    content: "Angel Kaye Gado";
+    color: white ;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* profile modal */
+.cards a{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    gap: 1rem  ;
+    color: rgb(238, 238, 238);
+    text-decoration: none;
+    align-items: center;
+    filter: drop-shadow(3px 4px 5px hsla(0, 0%, 0%, 0.3 52));
+}
+
+.cards{
+    
+    filter: drop-shadow(3px 4px 5px hsla(0, 0%, 0%, 0.3 52));
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem  ;
+    color: rgb(238, 238, 238);
+
+    cursor: pointer;
+}
+
+.lock{
+    height: 18px;
+    width: 18px;
+    color: rgb(177, 177, 177);
+    position: absolute;
+    right: 2rem;
+}
+.cards img{
+    height: 35px;
+    width: 35px;
+    border-radius: 4px;
+    object-fit: cover;
+
+}
+
+.Open-modal{
+    position: fixed;
+    top: clamp(75px,3vw, 300px);
+    right: 5vw;
+    opacity: 1;
+    transition: opacity .15s ease;
+    z-index: 999;
+    
+}
+
+.Close-modal{
+    display: none;
+    position: fixed;
+    top: clamp(75px,3vw, 300px);
+    right: 5vw;
+    opacity: 0;
+    transition: opacity .15s ease;
+}
+
+.arrow-modal{
+    right: .5rem;
+    transform: rotate(180deg);
+    height: 25px;
+    width: 25px;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    top: -1.4rem;
+}
+.signout a{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5em 1em;
+    cursor: pointer;
+
+    text-decoration: none;
+}
+
+.signout:hover{
+    background-color:#272727ad;
+}
+
+.manage,.transfer, .exit, .profile , .help{
+    color: rgb(238, 238, 238);
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+}
+
+.signout{
+    margin-top: 1rem;
+    border: 1px solid white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+.signout button{
+    font-size: 1.1rem;
+    color: rgb(238, 238, 238);
+    border: none;
+    background-color: transparent;
+    flex:1;
+    cursor: pointer;
+}
+
+.modal-container{
+    
+
+    z-index: 9999;
+    position: relative;
+
+    flex-direction: column;
+    display: flex;
+    width: 220px;
+    min-height: 350px;
+    padding: 1rem .6rem ;
+    gap: .7rem;
+
+    border: 2px solid rgb(20, 20, 20);
+    background-color: hsla(0, 0%, 0%, 0.747);
+    
+}
+
+.hamburger-menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+
+    display: none;
+}
+
+.hamburger-menu:focus {
+    outline: none;
+}
+
+.hamburger-line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #d4d4d4;
+    margin: 5px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.closed-menu{
+    position: fixed;
+    flex-direction: column;
+    background-color: hsla(0, 0%, 9%, 0.788);
+    top: clamp(50px,2vw, 300px);
+    gap: 1rem;
+    width: 80%;
+    padding: 1rem;
+    z-index: 999;
+    display: none;
+    opacity: 0;
+}
+
+.jennytitle{
+    width: clamp(300px, 12vw, 400px);
+}
+
+.open-menu{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: hsla(0, 0%, 9%, 0.788);
+    top: clamp(50px,2vw, 300px);
+    gap: 1rem;
+    width: 80%;
+    padding: 1rem;
+    z-index: 999;
+
+    opacity: 1;
+}
+
+@media (width <= 700px){
+
+    .openmenu{
+        display: none;
+    }
+
+    .hamburger-menu{
+        display: inline-block;
+    }
+
+
+
+
+}
